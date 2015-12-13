@@ -34,8 +34,9 @@ class GesturesViewController: UIViewController {
         showGestureName("Tapped")
     }
     
-    func swipedView(recognizer : UISwipeGestureRecognizer) {
+    @IBAction func swipedView(recognizer : UISwipeGestureRecognizer) {
         //message: "Swiped"
+        print("Swiped")
         showGestureName("Swiped")
 
     }
@@ -51,13 +52,14 @@ class GesturesViewController: UIViewController {
 
     }
 
-    func draggedView(sender: UIPanGestureRecognizer) {
+    @IBAction func draggedView(sender: UIPanGestureRecognizer) {
+        print("pan")
         showGestureName("Dragged")
 
     }
     
     @IBAction func pinchedView(sender: UIPinchGestureRecognizer) {
-        print("Pinch ")
+        print("Pinch")
         showGestureName("Pinch")
 
     }
